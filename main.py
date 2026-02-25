@@ -2,7 +2,11 @@ import colorama
 from colorama import Fore, Back, Style
 import time
 
-colorama.init()
+try:
+    colorama.init()
+except Exception as e:
+    print(f"Error initializing colorama: {e}")
+    exit(1)
 
 def cerita():
     print(Fore.YELLOW + Style.BRIGHT + "🏰 PETUALANGAN ANAK BUDAK DI KEKAISARAN 🏰" + Style.RESET_ALL)
@@ -136,23 +140,28 @@ def cerita():
     print(Fore.GREEN + "1. Saya tidak tahu" + Style.RESET_ALL)
     print(Fore.GREEN + "2. Ibu saya bernama Oddete, dan ini kalung peninggalannya" + Style.RESET_ALL)
     print(Fore.GREEN + "3. (Langsung) Tes DNA positif, Alex diangkat menjadi Putra Mahkota" + Style.RESET_ALL)
-    pilihan = input("Pilih opsi (1/2/3): ")
+    while True:
+        pilihan = input("Pilih opsi (1/2/3): ")
+        if pilihan in ["1", "2", "3"]:
+            break
+        else:
+            print(Fore.RED + "Pilihan tidak valid. Pilih 1, 2, atau 3." + Style.RESET_ALL)
     if pilihan == "1":
-        print("\n" + Fore.PURPLE + "🔍 PENEMUAN BESAR 🔍" + Style.RESET_ALL)
+        print("\n" + Fore.MAGENTA + "🔍 PENEMUAN BESAR 🔍" + Style.RESET_ALL)
         print(Fore.WHITE + "Alex menjawab: 'Saya tidak tahu, Tuan.' 😢" + Style.RESET_ALL)
         print(Fore.WHITE + "Kaisar berkata: 'Ibunya adalah bangsawan tercinta yang meninggal dalam perang 10 tahun lalu. Jasadnya tidak pernah ditemukan.' 💔" + Style.RESET_ALL)
         print(Fore.WHITE + "Kaisar sangat mencintainya. ❤️" + Style.RESET_ALL)
         print(Fore.WHITE + "Alex diangkat menjadi Putra Mahkota! 👑👦" + Style.RESET_ALL)
     elif pilihan == "2":
-        print("\n" + Fore.PURPLE + "🔍 PENEMUAN BESAR 🔍" + Style.RESET_ALL)
+        print("\n" + Fore.MAGENTA + "🔍 PENEMUAN BESAR 🔍" + Style.RESET_ALL)
         print(Fore.WHITE + "Alex menjawab: 'Ibu saya bernama Oddete.' dan memberi kalung peninggalannya. 📿" + Style.RESET_ALL)
         print(Fore.WHITE + "Kaisar terkejut: 'Kalung ini... aku yang memberikannya pada ibumu!' 😲" + Style.RESET_ALL)
         print(Fore.WHITE + "Kaisar berkata: 'Odette.. istriku.' 💔" + Style.RESET_ALL)
-        print(Fore.WHITE + "Ibunya adalah bangsawan tercinta yang meninggal dalam perang 10 tahun lalu. Jasadnya tidak pernah ditemukan.' 💔" + Style.RESET_ALL)
+        print(Fore.WHITE + "Ibunya adalah bangsawan tercinta yang meninggal dalam perang 10 tahun lalu. Jasadnya tidak pernah ditemukan. 💔" + Style.RESET_ALL)
         print(Fore.WHITE + "Kaisar sangat mencintainya. ❤️" + Style.RESET_ALL)
         print(Fore.WHITE + "Alex diangkat menjadi Putra Mahkota! 👑👦" + Style.RESET_ALL)
     else:
-        print("\n" + Fore.PURPLE + "🔍 PENEMUAN BESAR 🔍" + Style.RESET_ALL)
+        print("\n" + Fore.MAGENTA + "🔍 PENEMUAN BESAR 🔍" + Style.RESET_ALL)
         print(Fore.WHITE + "Tes DNA menunjukkan hasil positif! Alex adalah anak Kaisar. 🧬✅" + Style.RESET_ALL)
         print(Fore.WHITE + "Alex diangkat menjadi Putra Mahkota! 👑👦" + Style.RESET_ALL)
     input("\nTekan Enter untuk mengakhiri...")
@@ -160,6 +169,9 @@ def cerita():
     # Akhir
     print("\n" + Fore.GREEN + Style.BRIGHT + "🎉 AKHIR CERITA 🎉" + Style.RESET_ALL)
     print(Fore.WHITE + "Alex hidup bahagia sebagai pangeran di kekaisaran. 🏰😊" + Style.RESET_ALL)
+    print(Fore.YELLOW + "Dari hari itu, Alex belajar tentang kekuasaan, kebijaksanaan, dan cinta. 🌟" + Style.RESET_ALL)
+    print(Fore.CYAN + "Ia menjadi pemimpin yang adil, mengingat perjalanannya dari budak menjadi pangeran. 👑" + Style.RESET_ALL)
+    print(Fore.MAGENTA + "Petualangan ini mengajarkan bahwa takdir bisa berubah, dan keluarga selalu ada. ❤️" + Style.RESET_ALL)
 
 if __name__ == "__main__":
     cerita()
