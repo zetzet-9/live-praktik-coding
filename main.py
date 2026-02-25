@@ -132,14 +132,29 @@ def cerita():
     print(Fore.WHITE + "Tapi Kaisar terkejut melihat tanda lahir di tangan Alex. 🤯✋" + Style.RESET_ALL)
     print(Fore.WHITE + "'Tanda lahir ini... sama seperti ibumu!' kata Kaisar. 😲" + Style.RESET_ALL)
     print(Fore.WHITE + "Kaisar bertanya: 'Siapa ibumu?' 🤔" + Style.RESET_ALL)
-    input("\nTekan Enter untuk melanjutkan...")
-
-    # Ending baru
-    print("\n" + Fore.PURPLE + "🔍 PENEMUAN BESAR 🔍" + Style.RESET_ALL)
-    print(Fore.WHITE + "Alex menjawab: 'Saya tidak tahu, Tuan.' 😢" + Style.RESET_ALL)
-    print(Fore.WHITE + "Kaisar berkata: 'Ibunya adalah bangsawan tercinta yang meninggal dalam perang 10 tahun lalu. Jasadnya tidak pernah ditemukan.' 💔" + Style.RESET_ALL)
-    print(Fore.WHITE + "Kaisar sangat mencintainya. ❤️" + Style.RESET_ALL)
-    print(Fore.WHITE + "Alex diangkat menjadi Putra Mahkota! 👑👦" + Style.RESET_ALL)
+    print(Fore.WHITE + "Apa yang akan Alex jawab?" + Style.RESET_ALL)
+    print(Fore.GREEN + "1. Saya tidak tahu" + Style.RESET_ALL)
+    print(Fore.GREEN + "2. Ibu saya bernama Oddete, dan ini kalung peninggalannya" + Style.RESET_ALL)
+    print(Fore.GREEN + "3. (Langsung) Tes DNA positif, Alex diangkat menjadi Putra Mahkota" + Style.RESET_ALL)
+    pilihan = input("Pilih opsi (1/2/3): ")
+    if pilihan == "1":
+        print("\n" + Fore.PURPLE + "🔍 PENEMUAN BESAR 🔍" + Style.RESET_ALL)
+        print(Fore.WHITE + "Alex menjawab: 'Saya tidak tahu, Tuan.' 😢" + Style.RESET_ALL)
+        print(Fore.WHITE + "Kaisar berkata: 'Ibunya adalah bangsawan tercinta yang meninggal dalam perang 10 tahun lalu. Jasadnya tidak pernah ditemukan.' 💔" + Style.RESET_ALL)
+        print(Fore.WHITE + "Kaisar sangat mencintainya. ❤️" + Style.RESET_ALL)
+        print(Fore.WHITE + "Alex diangkat menjadi Putra Mahkota! 👑👦" + Style.RESET_ALL)
+    elif pilihan == "2":
+        print("\n" + Fore.PURPLE + "🔍 PENEMUAN BESAR 🔍" + Style.RESET_ALL)
+        print(Fore.WHITE + "Alex menjawab: 'Ibu saya bernama Oddete.' dan memberi kalung peninggalannya. 📿" + Style.RESET_ALL)
+        print(Fore.WHITE + "Kaisar terkejut: 'Kalung ini... aku yang memberikannya pada ibumu!' 😲" + Style.RESET_ALL)
+        print(Fore.WHITE + "Kaisar berkata: 'Odette.. istriku.' 💔" + Style.RESET_ALL)
+        print(Fore.WHITE + "Ibunya adalah bangsawan tercinta yang meninggal dalam perang 10 tahun lalu. Jasadnya tidak pernah ditemukan.' 💔" + Style.RESET_ALL)
+        print(Fore.WHITE + "Kaisar sangat mencintainya. ❤️" + Style.RESET_ALL)
+        print(Fore.WHITE + "Alex diangkat menjadi Putra Mahkota! 👑👦" + Style.RESET_ALL)
+    else:
+        print("\n" + Fore.PURPLE + "🔍 PENEMUAN BESAR 🔍" + Style.RESET_ALL)
+        print(Fore.WHITE + "Tes DNA menunjukkan hasil positif! Alex adalah anak Kaisar. 🧬✅" + Style.RESET_ALL)
+        print(Fore.WHITE + "Alex diangkat menjadi Putra Mahkota! 👑👦" + Style.RESET_ALL)
     input("\nTekan Enter untuk mengakhiri...")
 
     # Akhir
